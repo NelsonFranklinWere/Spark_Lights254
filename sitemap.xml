@@ -7,7 +7,7 @@
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://sparklights.co.ke/</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sparklights.co.ke/" />
@@ -31,7 +31,7 @@
   <!-- Collection / All Products Page - High Priority -->
   <url>
     <loc>https://sparklights.co.ke/collection.html</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sparklights.co.ke/collection.html" />
@@ -55,6 +55,71 @@
     <image:image>
       <image:loc>https://sparklights.co.ke/out1.jpg</image:loc>
       <image:caption>Outdoor Lights Nairobi | Best Lights in Nairobi | Light Shop | Amazing Lights</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Category Pages - High Priority -->
+  <url>
+    <loc>https://sparklights.co.ke/chandeliers-nairobi.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sparklights.co.ke/chandeliers-nairobi.html" />
+    <image:image>
+      <image:loc>https://sparklights.co.ke/round1.jpg</image:loc>
+      <image:caption>Chandeliers Nairobi | Gold Chandelier Kenya | Crystal Chandelier Nairobi - Spark_Lights254</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sparklights.co.ke/wow1.jpg</image:loc>
+      <image:caption>Golden Round Lights | Chandeliers in Nairobi | Best Chandeliers - Spark_Lights254</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sparklights.co.ke/ceiling-lights-nairobi.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sparklights.co.ke/ceiling-lights-nairobi.html" />
+    <image:image>
+      <image:loc>https://sparklights.co.ke/ceiling3.png</image:loc>
+      <image:caption>Ceiling Lights Nairobi | LED Ceiling Lights | Best Ceiling Lights - Spark_Lights254</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sparklights.co.ke/ceiling5.png</image:loc>
+      <image:caption>Round Ceiling Fixture | Ceiling Lights Nairobi | Modern Ceiling Lights - Spark_Lights254</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sparklights.co.ke/pendant-lights-nairobi.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sparklights.co.ke/pendant-lights-nairobi.html" />
+    <image:image>
+      <image:loc>https://sparklights.co.ke/number1.jpg</image:loc>
+      <image:caption>Pendant Lights Nairobi | Sisal Pendant Lights Kenya | Modern Pendant Lights - Spark_Lights254</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sparklights.co.ke/roomm1.png</image:loc>
+      <image:caption>Feathery Pendants | Pendant Lights Nairobi | Sisal Pendant Lights - Spark_Lights254</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sparklights.co.ke/dining-room-lights-nairobi.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sparklights.co.ke/dining-room-lights-nairobi.html" />
+    <image:image>
+      <image:loc>https://sparklights.co.ke/round2.jpg</image:loc>
+      <image:caption>Dining Room Lights Nairobi | Dining Room Hanging Lights | Modern Dining Lights - Spark_Lights254</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sparklights.co.ke/round1.jpg</image:loc>
+      <image:caption>Gold Crystal Chandelier | Dining Room Lights Nairobi | Best Dining Room Lighting - Spark_Lights254</image:caption>
     </image:image>
   </url>
 
