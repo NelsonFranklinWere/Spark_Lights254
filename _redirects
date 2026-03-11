@@ -1,0 +1,7 @@
+# Redirect www to non-www for Spark_Lights254
+# This file works with Netlify hosting
+# For GitHub Pages, use the redirect.html file instead
+
+www.sparklights.co.ke/*    https://sparklights.co.ke/:splat    301!
+http://www.sparklights.co.ke/*    https://sparklights.co.ke/:splat    301!
+https://www.sparklights.co.ke/*    https://sparklights.co.ke/:splat    301!
