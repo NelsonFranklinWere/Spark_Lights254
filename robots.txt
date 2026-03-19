@@ -5,6 +5,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /admin.html
 Disallow: /private/
 Disallow: /temp/
 Disallow: /drafts/
