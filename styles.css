@@ -358,11 +358,85 @@ header {
     gap: 30px;
 }
 
+/* Home featured picks: 3 columns on desktop (so 6 cards = 2 full rows) */
+/* Home featured picks: 2 cards per row on desktop */
+.home-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* Desktop: home featured card buttons in one row, smaller */
+@media screen and (min-width: 769px) {
+    .home-products-grid .product-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 10px;
+        padding: 14px 16px;
+    }
+
+    .home-products-grid .product-info h3 {
+        flex: 0 0 100%;
+        width: 100%;
+        margin-bottom: 4px;
+        font-size: 1.1rem;
+    }
+
+    .home-products-grid .product-info .product-price {
+        flex: 0 0 100%;
+        width: 100%;
+        margin-bottom: 6px;
+        font-size: 1rem;
+    }
+
+    .home-products-grid .product-info .btn {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        border-radius: 40px;
+    }
+}
+
+/* Home Featured Picks: keep a 2-column grid on tablet widths too */
+@media (max-width: 992px) {
+    .home-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 20px !important;
+    }
+}
+
 /* Override for small screens - force 2 columns */
 @media screen and (max-width: 768px) {
     .products-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 15px !important;
+    }
+    /* Featured Picks buttons: keep them horizontal on smaller screens */
+    .home-products-grid .product-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px 10px;
+        align-items: center;
+    }
+    .home-products-grid .product-info h3,
+    .home-products-grid .product-info .product-price {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .home-products-grid .product-info .btn {
+        flex: 1 1 0;
+        min-width: 0;
+        width: auto;
+        text-align: center;
+        padding: 6px 9px;
+        font-size: 0.74rem;
+        border-radius: 40px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.1;
     }
     
     .product-card {
@@ -375,6 +449,46 @@ header {
     .products-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 12px !important;
+    }
+    .home-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+}
+
+/* Very small screens: squeeze content so 2 cards still fit per row */
+@media screen and (max-width: 420px) {
+    .home-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .home-products-grid .product-card {
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    .home-products-grid .product-info {
+        padding: 14px 12px !important;
+    }
+
+    .home-products-grid .product-info h3 {
+        font-size: 1rem !important;
+        margin-bottom: 6px;
+    }
+
+    .home-products-grid .product-info .product-price {
+        font-size: 0.95rem !important;
+        margin-bottom: 8px;
+    }
+
+    .home-products-grid .product-info .btn {
+        padding: 8px 10px !important;
+        font-size: 0.78rem !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        line-height: 1.2;
     }
 }
 
@@ -948,6 +1062,9 @@ footer {
     display: flex;
     gap: 15px;
     margin-top: 15px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 0;
 }
 
 .social-links a {
@@ -989,11 +1106,12 @@ footer {
 .floating-whatsapp {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 20px;
+    right: auto;
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .whatsapp-btn {
@@ -1027,9 +1145,18 @@ footer {
     transform: translateY(10px);
     transition: var(--transition);
     pointer-events: none;
+    max-width: 240px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .floating-whatsapp:hover .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.whatsapp-tooltip.show {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1216,8 +1343,8 @@ footer {
     }
 
     .category-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
     }
 
     .category-card {
@@ -1922,5 +2049,147 @@ footer {
     .exit-popup-body p {
         font-size: 0.9rem;
         margin-bottom: 12px;
+    }
+}
+
+/* SEO rebuild compatibility styles */
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 10px;
+    z-index: 1200;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 8px 10px;
+}
+.product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+.category-intro,
+.buying-guide {
+    padding: 50px 0;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+.footer-col {
+    font-size: 0.9rem;
+}
+
+.footer-col h3 {
+    font-size: 1.0rem;
+    margin-bottom: 14px;
+    color: var(--soft-pink);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 18px;
+    row-gap: 8px;
+}
+.footer-col li {
+    margin: 0;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0 30px;
+}
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #ddd;
+}
+
+.footer-col a {
+    color: var(--soft-pink);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.footer-col a:hover {
+    color: var(--primary-pink);
+    text-decoration: underline;
+}
+.page-nav-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 18px 0 28px;
+}
+.product-note {
+    margin-top: 12px;
+    color: #666;
+    font-size: 0.92rem;
+}
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0 24px;
+}
+.category-nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 8px;
+}
+.filter-chip {
+    border: 1px solid var(--primary-pink);
+    color: var(--primary-pink);
+    background: var(--white);
+    padding: 8px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.92rem;
+}
+.filter-chip.active {
+    background: var(--primary-pink);
+    color: var(--white);
+}
+.footer-credit {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #666;
+}
+.footer-credit a {
+    color: var(--primary-pink);
+    font-weight: 600;
+}
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        display: block;
+        box-shadow: none;
+        padding: 0;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
     }
 }

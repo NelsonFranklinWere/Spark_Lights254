@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="index, follow"><meta name="author" content="Spark Lights 254">
+<meta name="geo.region" content="KE-30"><meta name="geo.placename" content="Nairobi"><meta name="geo.position" content="-1.2841;36.8229"><meta name="ICBM" content="-1.2841, 36.8229">
+<title>Wall Lights Nairobi | Indoor & Outdoor Wall Lights | Spark Lights 254</title>
+<meta name="description" content="Modern wall lights for indoor and outdoor use in Nairobi. From KES 2,500. Same-day delivery, expert installation. Order via WhatsApp - Spark Lights 254.">
+<link rel="canonical" href="https://sparklights.co.ke/wall-lights-nairobi.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Spark Lights 254"><meta property="og:title" content="Wall Lights Nairobi | Spark Lights 254"><meta property="og:description" content="Modern wall lights for indoor and outdoor use in Nairobi."><meta property="og:url" content="https://sparklights.co.ke/wall-lights-nairobi.html"><meta property="og:image" content="https://sparklights.co.ke/number2.png"><meta property="og:locale" content="en_KE">
+<link rel="stylesheet" href="styles.css?v=20260319">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Spark Lights 254","url":"https://sparklights.co.ke","telephone":["+254712827840","+254799953563"],"address":{"@type":"PostalAddress","streetAddress":"Nyamakima, Duruma Road, New Nyamakima Electrical Point Building, Shop 216, 2nd Floor","addressLocality":"Nairobi","addressCountry":"KE"},"geo":{"@type":"GeoCoordinates","latitude":-1.2841,"longitude":36.8229},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:30","closes":"18:30"}],"priceRange":"KES 2,000 - KES 18,500+"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sparklights.co.ke/"},{"@type":"ListItem","position":2,"name":"Wall Lights Nairobi","item":"https://sparklights.co.ke/wall-lights-nairobi.html"}]}</script>
+</head><body>
+<header><div class="container"><nav class="navbar"><div class="logo"><h1><a href="/index.html">Spark <span>Lights 254</span></a></h1></div></nav></div></header>
+<section class="hero" style="height:420px;">
+  <div class="hero-slider">
+    <div class="slide active" style="background-image:url('number2.png');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h1 style="color:#fff;">Wall Lights in Nairobi - Indoor & Outdoor Designs</h1>
+      </div>
+    </div>
+    <div class="slide" style="background-image:url('super1.jpg');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h1 style="color:#fff;">Wall Lights in Nairobi - Indoor & Outdoor Designs</h1>
+      </div>
+    </div>
+    <div class="slide" style="background-image:url('wallLights2.png');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h1 style="color:#fff;">Wall Lights in Nairobi - Indoor & Outdoor Designs</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="intro"><div class="container"><div class="page-nav-buttons"><a class="btn btn-secondary" href="javascript:history.back()">← Back</a><a class="btn btn-secondary" href="/index.html">Home</a><a class="btn btn-primary" href="/collection.html">All Products</a></div><div class="category-nav-buttons" aria-label="Browse categories"><a class="filter-chip" href="/chandeliers-nairobi.html">Chandeliers</a><a class="filter-chip" href="/ceiling-lights-nairobi.html">Ceiling</a><a class="filter-chip" href="/pendant-lights-nairobi.html">Pendant</a><a class="filter-chip" href="/dining-room-lights-nairobi.html">Dining Room</a><a class="filter-chip active" href="/wall-lights-nairobi.html">Wall</a><a class="filter-chip" href="/outdoor-lights-nairobi.html">Outdoor</a><a class="filter-chip" href="/bedroom-lights-nairobi.html">Bedroom</a></div></div></section>
+<section class="category-intro"><div class="container"><p>Looking for wall lights in Nairobi? Spark Lights 254 stocks indoor feature sconces and outdoor wall fittings from KES 2,500. Our options suit bedrooms, hallways, balconies, and exterior walls where you need both beauty and practical light.</p><p>Order via WhatsApp for quick support, delivery, and installation scheduling. We help you choose weatherproof options for outdoor spaces and softer tones for interiors.</p></div></section>
+<section class="featured-products"><div class="container"><div class="section-header"><h2>All Wall Lights</h2></div><div class="products-grid" id="wall-products-grid"></div></div></section>
+<div class="floating-whatsapp" id="floating-whatsapp">
+  <div class="whatsapp-tooltip" id="wa-popup">Chat us</div>
+  <a class="whatsapp-btn" href="https://wa.me/254712827840?text=Hi%20Spark%20Lights%20254!%20I%20want%20to%20order%20lights." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+</div>
+
+<script>
+  (function () {
+    const tooltip = document.getElementById("wa-popup");
+    if (!tooltip) return;
+
+    const localKey = "spark-wa-popup-shown";
+    try {
+      if (localStorage.getItem(localKey) === "1") return;
+    } catch (e) {}
+
+    const messages = ["Chat us", "Looking for lights?", "Chat us", "We're here to help you."];
+    const showTimes = [5000, 18000, 32000, 48000];
+    const showForMs = 3600;
+
+    showTimes.forEach((t, i) => {
+      setTimeout(() => {
+        try {
+          if (localStorage.getItem(localKey) === "1") return;
+        } catch (e2) {}
+
+        tooltip.textContent = messages[i] || messages[messages.length - 1];
+        tooltip.classList.add("show");
+        setTimeout(() => tooltip.classList.remove("show"), showForMs);
+
+        if (i === messages.length - 1) {
+          try {
+            localStorage.setItem(localKey, "1");
+          } catch (e3) {}
+        }
+      }, t);
+    });
+  })();
+</script>
+<script src="/catalog-prices.js"></script>
+<script>
+const wallProducts = [
+  { name: "Tri Colour Wall Light", price: "KES 2,500", image: "number2.png" },
+  { name: "Decorative Wall Light", price: "KES 4,500", image: "super1.jpg" },
+];
+for (let i = 2; i <= 22; i++) wallProducts.push({ name: `Wall Light Model ${i}`, price: `KES ${2500 + (i * 180)}`, image: `wallLights${i}.png` });
+const wallGrid = document.getElementById("wall-products-grid");
+wallGrid.innerHTML = wallProducts.map(p => `<div class="product-card"><img src="${p.image}" alt="${p.name} - Spark Lights 254 Nairobi"><div class="product-info"><h3>${p.name}</h3><p class="product-price">${p.price}</p><a class="btn btn-whatsapp" href="https://wa.me/254712827840?text=${encodeURIComponent("Hi Spark Lights 254! I want to order " + p.name + " at " + p.price + ".")}">Order on WhatsApp</a></div></div>`).join("");
+if (window.applyCatalogPricesToPage) window.applyCatalogPricesToPage();
+
+// Render many products from the original catalog (so images & KES prices match).
+(async function () {
+  if (!window.loadLightsCatalog) return;
+  try {
+    const catalog = await window.loadLightsCatalog();
+    const dedupeByImage = (arr) => {
+      const seen = new Set();
+      return arr.filter((p) => {
+        if (!p || !p.image || seen.has(p.image)) return false;
+        seen.add(p.image);
+        return true;
+      });
+    };
+
+    const required = catalog.filter((p) => p.label === "wall");
+    const extras = catalog.filter((p) => p.label === "outdoor" || p.label === "ceiling");
+    const products = dedupeByImage(required.concat(extras)).slice(0, 120);
+
+    wallGrid.innerHTML = products
+      .map((p) => {
+        const priceText = window.formatKES ? window.formatKES(p.price) : "KES " + p.price;
+        const message = "Hi Spark Lights 254! I want to order " + p.name + " at " + priceText + ".";
+        const wa = "https://wa.me/254712827840?text=" + encodeURIComponent(message);
+        return `
+          <div class="product-card">
+            <img src="${p.image}" alt="${p.name} — Spark Lights 254 Nairobi">
+            <div class="product-info">
+              <h3>${p.name}</h3>
+              <p class="product-price">${priceText}</p>
+              <a class="btn btn-whatsapp" href="${wa}" target="_blank" rel="noopener">Order on WhatsApp</a>
+            </div>
+          </div>`;
+      })
+      .join("");
+  } catch (e) {}
+})();
+
+const slides = document.querySelectorAll(".slide");
+let s = 0;
+if (slides.length > 1) {
+  setInterval(() => {
+    slides[s].classList.remove("active");
+    s = (s + 1) % slides.length;
+    slides[s].classList.add("active");
+  }, 4500);
+}
+</script>
+</body></html>
