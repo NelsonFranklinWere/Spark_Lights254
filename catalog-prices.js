@@ -6,6 +6,36 @@
   let cachedCatalog = null;
   let cachedLoadPromise = null;
 
+  const LIVE_SITE_ORIGIN = "https://sparklights.co.ke";
+
+  function toAbsoluteUrl(url) {
+    try {
+      return new URL(String(url || ""), LIVE_SITE_ORIGIN).href;
+    } catch (e) {
+      return String(url || "");
+    }
+  }
+
+  window.buildWhatsAppOrderMessage = function buildWhatsAppOrderMessage(opts) {
+    const name = (opts && opts.name) || "";
+    const priceText = (opts && opts.priceText) || "";
+    const imageUrl = toAbsoluteUrl(opts && opts.imageUrl);
+    const pageUrl = toAbsoluteUrl((opts && opts.pageUrl) || window.location.href);
+
+    let message = "Hi Spark Lights 254! I want to order " + name;
+    if (priceText) message += " at " + priceText;
+    message += ".";
+    if (imageUrl) message += "\nImage: " + imageUrl;
+    if (pageUrl) message += "\nPage: " + pageUrl;
+    return message;
+  };
+
+  window.buildWhatsAppOrderLink = function buildWhatsAppOrderLink(opts) {
+    const phone = (opts && opts.phone) || "254712827840";
+    const message = window.buildWhatsAppOrderMessage ? window.buildWhatsAppOrderMessage(opts) : "";
+    return "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+  };
+
   // Only include images that actually exist in this repo.
   // This prevents category pages from rendering <img> tags for missing files.
   const EXISTING_IMAGES = new Set([
@@ -262,9 +292,15 @@
       if (img) img.alt = data.name + " — Spark Lights 254 Nairobi";
 
       if (wa) {
-        const message = "Hi Spark Lights 254! I want to order " + data.name + " at " + priceText + ".";
-        wa.href =
-          "https://wa.me/254712827840?text=" + encodeURIComponent(message);
+        wa.href = window.buildWhatsAppOrderLink
+          ? window.buildWhatsAppOrderLink({
+              phone: "254712827840",
+              name: data.name,
+              priceText,
+              imageUrl: src,
+              pageUrl: window.location.href,
+            })
+          : "https://wa.me/254712827840?text=" + encodeURIComponent("Hi Spark Lights 254! I want to order " + data.name + " at " + priceText + ".");
       }
     }
   };

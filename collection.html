@@ -145,7 +145,7 @@
         <div class="product-info">
           <h3>${p.name}</h3>
           <p class="product-price">${p.price}</p>
-          <a class="btn btn-whatsapp" href="https://wa.me/254712827840?text=${encodeURIComponent("Hi Spark Lights 254! I want to order " + p.name + " at " + p.price + ".")}" target="_blank" rel="noopener">Order on WhatsApp</a>
+          <a class="btn btn-whatsapp" href="${(window.buildWhatsAppOrderLink ? window.buildWhatsAppOrderLink({ phone: '254712827840', name: p.name, priceText: p.price, imageUrl: p.image, pageUrl: window.location.href }) : ('https://wa.me/254712827840?text=' + encodeURIComponent('Hi Spark Lights 254! I want to order ' + p.name + ' at ' + p.price + '.')))}" target="_blank" rel="noopener">Order on WhatsApp</a>
         </div>
       </div>
       `).join("");

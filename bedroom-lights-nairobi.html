@@ -113,8 +113,15 @@ if (window.applyCatalogPricesToPage) window.applyCatalogPricesToPage();
     bedroomGrid.innerHTML = products
       .map((p) => {
         const priceText = window.formatKES ? window.formatKES(p.price) : "KES " + p.price;
-        const message = "Hi Spark Lights 254! I want to order " + p.name + " at " + priceText + ".";
-        const wa = "https://wa.me/254712827840?text=" + encodeURIComponent(message);
+        const wa = window.buildWhatsAppOrderLink
+          ? window.buildWhatsAppOrderLink({
+              phone: "254712827840",
+              name: p.name,
+              priceText,
+              imageUrl: p.image,
+              pageUrl: window.location.href,
+            })
+          : "https://wa.me/254712827840?text=" + encodeURIComponent("Hi Spark Lights 254! I want to order " + p.name + " at " + priceText + ".");
         return `
           <div class="product-card">
             <img src="${p.image}" alt="${p.name} — Spark Lights 254 Nairobi">

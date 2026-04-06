@@ -356,6 +356,25 @@
     if (window.location.hostname === "www.sparklights.co.ke") {
       window.location.replace("https://sparklights.co.ke" + window.location.pathname + window.location.search + window.location.hash);
     }
+
+    (function () {
+      if (!window.buildWhatsAppOrderLink) return;
+      const cards = Array.from(document.querySelectorAll(".product-card"));
+      for (const card of cards) {
+        const wa = card.querySelector("a.btn-whatsapp");
+        const img = card.querySelector("img");
+        const h3 = card.querySelector("h3");
+        const priceEl = card.querySelector(".product-price");
+        if (!wa || !img || !h3) continue;
+        wa.href = window.buildWhatsAppOrderLink({
+          phone: "254712827840",
+          name: h3.textContent || "",
+          priceText: priceEl ? priceEl.textContent || "" : "",
+          imageUrl: img.getAttribute("src") || "",
+          pageUrl: window.location.href,
+        });
+      }
+    })();
     const slides = document.querySelectorAll(".slide");
     let i = 0;
     if (slides.length > 1) {
