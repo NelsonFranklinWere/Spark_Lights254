@@ -1,0 +1,14 @@
+{
+  "name": "spark-lights-254",
+  "version": "1.0.0",
+  "description": "Spark Lights 254 - Lighting products website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["lighting", "nairobi", "chandeliers", "ceiling-lights"],
+  "author": "Spark Lights 254",
+  "license": "ISC"
+}
